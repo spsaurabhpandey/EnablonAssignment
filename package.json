@@ -1,0 +1,27 @@
+{
+  "name": "todoautomation",
+  "version": "1.0.0",
+  "description": "This application to meant to perform some automatic tasks on todo app using cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open",
+    "test-headless": "npx cypress run -b chrome",
+    "report": "node cucumber-html-report.js"
+  },
+  "author": "Saurabh Pandey",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.0.0",
+    "cypress-cucumber-preprocessor": "^4.1.4",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
